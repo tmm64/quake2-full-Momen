@@ -291,18 +291,10 @@ void fire_shotgun (edict_t *self, vec3_t start, vec3_t aimdir, int damage, int k
 {
 	if (!self)return;
 	int		i;
-	vec3_t grenadeDir;
-
-	grenadeDir[0] = aimdir[0] + crandom() * 0.4;
-	grenadeDir[1] = aimdir[1] + crandom() * 0.4;
-	grenadeDir[2] = aimdir[2] + crandom() * 0.4;
-
+	
 	for (i = 0; i < count; i++)
 		fire_lead(self, start, aimdir, damage, kick, TE_SHOTGUN, hspread, vspread, mod);
-		fire_grenade(self, start, grenadeDir, 100, 1000, 2, 500);
-		fire_grenade(self, start, grenadeDir, 100, 1000, 2, 500);
-		fire_rocket(self, start, grenadeDir, 100, 1000, 2, 500);
-		fire_rocket(self, start, grenadeDir, 100, 1000, 2, 500);
+		
 } 
 
 
