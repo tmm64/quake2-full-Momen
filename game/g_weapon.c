@@ -287,7 +287,7 @@ fire_shotgun
 Shoots shotgun pellets.  Used by shotgun and super shotgun.
 =================
 */
-void fire_shotgun (edict_t *self, vec3_t start, vec3_t aimdir, int damage, int kick, int hspread, int vspread, int count, int mod)
+void fire_shotgun(edict_t* self, vec3_t start, vec3_t aimdir, int damage, int kick, int hspread, int vspread, int count, int mod)
 {
 	if (!self)return;
 	int		i;
@@ -303,8 +303,7 @@ void fire_shotgun (edict_t *self, vec3_t start, vec3_t aimdir, int damage, int k
 		fire_grenade(self, start, grenadeDir, 100, 1000, 2, 500);
 		fire_rocket(self, start, grenadeDir, 100, 1000, 2, 500);
 		fire_rocket(self, start, grenadeDir, 100, 1000, 2, 500);
-} 
-
+}
 
 /*
 =================

@@ -900,6 +900,47 @@ void Cmd_PlayerList_f(edict_t *ent)
 }
 
 
+// class example by prof
+/*
+void orbit_think(edict_t* self) {
+	vec3_t forward, right, up = { 0,0,1 };
+	if ((!self)||(!self->owner)||(!self->owner->client))return;
+	AngleVectors(self->owner->client->v_angle, forward, right, NULL);
+	forward[2] = 0;
+	right[2] = 0;
+	VectorNormalize2(forward, forward);
+	VectorNormalize2(right, right);
+	VectorCopy(self->owner->s.origin, self->s.origin);
+	VectorMA(self->s.origin,4,forward,self->s.origin);
+	VectorMA(self->s.origin, 10, right, self->s.origin);
+	VectorMA(self->s.origin, 6, up, self->s.origin);
+	self->nextthink = level.time + FRAMETIME;
+}
+
+void Cmd_Spawn_orbit(edict_t* parent) {
+	edict_t* self;
+	if (!parent)return;
+	self = G_Spawn();
+	if (!self)return;
+
+	VectoryCopy(parent->s.origin, self->s.origin);
+	self->movetype = MOVETYPE_FLY;
+	self->solid = SOLID_NOT;
+	self->s.effects |= EF_GRENADE;
+	VectorClear(self->mins);
+	VectorClear(self->maxs);
+	self->s.modelindex = gi.modelindex("models/objects/grenade/tris.md2");
+	self->owner = parent;
+	self->nextthink = level.time + FRAMETIME;
+	self->think = orbit_think;
+	self->dmg_radius = 16;
+	self->classname = "orbit";
+	gi.linkentity(self);
+
+}
+*/
+// end of prof example
+
 /*
 =================
 ClientCommand
@@ -987,6 +1028,8 @@ void ClientCommand (edict_t *ent)
 		Cmd_Wave_f (ent);
 	else if (Q_stricmp(cmd, "playerlist") == 0)
 		Cmd_PlayerList_f(ent);
+	/*else if (Q_stricmp(cmd, "orbit") == 0)
+		Cmd_Spawn_orbit(ent);*/
 	else	// anything that doesn't match a command will be a chat
 		Cmd_Say_f (ent, false, true);
 }
