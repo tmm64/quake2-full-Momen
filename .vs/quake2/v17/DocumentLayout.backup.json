@@ -28,7 +28,7 @@
               "RelativeDocumentMoniker": "game\\g_weapon.c",
               "ToolTip": "C:\\Users\\tanib\\GitProjects\\quake2-full-Momen\\game\\g_weapon.c",
               "RelativeToolTip": "game\\g_weapon.c",
-              "ViewState": "AgIAAB4BAAAAAAAAAAAnwCkBAAAnAAAAAAAAAA==",
+              "ViewState": "AgIAABUBAAAAAAAAAAAnwCkBAAAsAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000423|",
               "WhenOpened": "2026-03-31T16:56:42.197Z",
               "EditorCaption": ""
@@ -47,8 +47,7 @@
               "RelativeToolTip": "game\\p_weapon.c",
               "ViewState": "AgIAAOYCAAAAAAAAAAAnwAwDAAAsAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000423|",
-              "WhenOpened": "2026-03-31T16:49:49.39Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-31T16:49:49.39Z"
             }
           ]
         }
