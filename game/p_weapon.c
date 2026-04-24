@@ -1235,10 +1235,11 @@ void weapon_shotgun_fire (edict_t *ent)
 
 void Weapon_Shotgun (edict_t *ent)
 {
-	static int	pause_frames[]	= {22, 28, 34, 0};
-	static int	fire_frames[]	= {8, 9, 0};
+	static int	pause_frames[]	= {0};
+	static int	fire_frames[]	= {8,0};
 
-	Weapon_Generic (ent, 7, 18, 36, 39, pause_frames, fire_frames, weapon_shotgun_fire);
+	Weapon_Generic (ent, 7, 10, 11, 14, pause_frames, fire_frames, weapon_shotgun_fire);
+	// 4th and 5th param are idle frames
 }
 
 
