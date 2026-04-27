@@ -345,6 +345,7 @@ Display the current help message
 */
 void Cmd_Help_f (edict_t *ent)
 {
+	if (!ent)return;
 	// this is for backwards compatability
 	if (deathmatch->value)
 	{
