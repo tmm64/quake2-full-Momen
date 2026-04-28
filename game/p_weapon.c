@@ -955,7 +955,7 @@ MACHINEGUN / CHAINGUN
 
 ======================================================================
 */
-
+#define MACHINEGUN_TIMER		25.0
 void Machinegun_Fire (edict_t *ent)
 {
 	int	i;
@@ -966,6 +966,8 @@ void Machinegun_Fire (edict_t *ent)
 	int			kick = 2;
 	vec3_t		offset;
 	float       timer;
+
+	if (!ent)return;
 
 	if (!(ent->client->buttons & BUTTON_ATTACK))
 	{
@@ -1019,6 +1021,9 @@ void Machinegun_Fire (edict_t *ent)
 	VectorSet(offset, 0, 8, ent->viewheight-8);
 	P_ProjectSource (ent->client, ent->s.origin, offset, forward, right, start);
 	fire_bullet (ent, start, forward, damage, kick, DEFAULT_BULLET_HSPREAD, DEFAULT_BULLET_VSPREAD, MOD_MACHINEGUN);
+	
+	timer = MACHINEGUN_TIMER - level.time;
+	gi.dprintf("machinegun cooldown is %f\n", timer);
 
 	gi.WriteByte (svc_muzzleflash);
 	gi.WriteShort (ent-g_edicts);
@@ -1046,9 +1051,9 @@ void Machinegun_Fire (edict_t *ent)
 void Weapon_Machinegun (edict_t *ent)
 {
 	static int	pause_frames[]	= {23, 45, 0};
-	static int	fire_frames[]	= {4, 5, 0};
+	static int	fire_frames[]	= {4, 5,6,7, 0};
 
-	Weapon_Generic (ent, 3, 5, 45, 49, pause_frames, fire_frames, Machinegun_Fire);
+	Weapon_Generic (ent, 3, 9, 45, 49, pause_frames, fire_frames, Machinegun_Fire);
 }
 
 void Chaingun_Fire (edict_t *ent)

@@ -316,10 +316,10 @@ void HelpComputer (edict_t *ent)
 	// send the layout
 	Com_sprintf (string, sizeof(string),
 		"xv 32 yv 8 picn help "			// background
-		"xv 202 yv 12 string2 \"%s\" "		// skill
-		"xv 0 yv 24 cstring2 \"%s\" "		// level name
-		"xv 0 yv 54 cstring2 \"%s\" "		// help 1
-		"xv 0 yv 110 cstring2 \"%s\" "		// help 2
+		"xv 202 yv 12 string2 \"IT-266\" "		// skill
+		"xv 0 yv 24 cstring2 \"Common Deliverable #5\" "		// level name
+		"xv 0 yv 54 cstring2 \"Titanfall 2 mod!\n Check out the new weapons!\" "		// help 1
+		"xv 0 yv 110 cstring2 \"Press the T key!\n It will activate your Titan!\" "		// help 2
 		"xv 50 yv 164 string2 \" kills     goals    secrets\" "
 		"xv 50 yv 172 string2 \"%3i/%3i     %i/%i       %i/%i\" ", 
 		sk,
