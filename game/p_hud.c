@@ -319,7 +319,7 @@ void HelpComputer (edict_t *ent)
 		"xv 202 yv 12 string2 \"IT-266\" "		// skill
 		"xv 0 yv 24 cstring2 \"Common Deliverable #5\" "		// level name
 		"xv 0 yv 54 cstring2 \"Titanfall 2 mod!\n Check out the new weapons!\" "		// help 1
-		"xv 0 yv 110 cstring2 \"Press the T key!\n It will activate your Titan!\" "		// help 2
+		"xv 0 yv 110 cstring2 \"Press the T key!\n It will activate your Titan!\" "	
 		"xv 50 yv 164 string2 \" kills     goals    secrets\" "
 		"xv 50 yv 172 string2 \"%3i/%3i     %i/%i       %i/%i\" ", 
 		sk,
@@ -335,6 +335,16 @@ void HelpComputer (edict_t *ent)
 	gi.unicast (ent, true);
 }
 
+/*
+==================
+Cmd_TitanfallUI_f
+
+Display Titan UI
+==================
+*/
+void Cmd_TitanfallUI_f(edict_t* ent) {
+	//Here I need to figure out how to display the Titan health.
+}
 
 /*
 ==================

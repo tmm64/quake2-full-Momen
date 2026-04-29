@@ -965,22 +965,24 @@ void Machinegun_Fire (edict_t *ent)
 	int			damage = 8;
 	int			kick = 2;
 	vec3_t		offset;
-	float       threeCount;
 
 	if (!ent)return;
 
-	if (ent->client->machinegun_time > level.time) {
-		return;  
+	
+
+	if (ent->client->machinegun_count >= 3) {
+		if (!(ent->client->buttons & BUTTON_ATTACK)) {
+			ent->client->machinegun_count = 0;
+			return;
+		}
 	}
 
-	
+	if (ent->client->machinegun_time > level.time) {
+		return;
+	}
 
 	if (!(ent->client->buttons & BUTTON_ATTACK))
 	{
-		if (threeCount >= 3) {
-			threeCount = 0;
-			return;
-		}
 		ent->client->machinegun_shots = 0;
 		ent->client->ps.gunframe++;
 		return;
@@ -1031,13 +1033,13 @@ void Machinegun_Fire (edict_t *ent)
 	VectorSet(offset, 0, 8, ent->viewheight-8);
 	P_ProjectSource (ent->client, ent->s.origin, offset, forward, right, start);
 	fire_bullet (ent, start, forward, damage, kick, DEFAULT_BULLET_HSPREAD, DEFAULT_BULLET_VSPREAD, MOD_MACHINEGUN);
-	threeCount++;
+	ent->client->machinegun_count++;
 	
-	if (threeCount >= 3) {
-		ent->client->machinegun_time = level.time + 5;
+	if (ent->client->machinegun_count >= 3) {
+		ent->client->machinegun_time = level.time + 0.5f;
 	}
 	else {
-		ent->client->machinegun_time = level.time + .05;
+		ent->client->machinegun_time = level.time + 0.1f;
 	}
 
 	gi.WriteByte (svc_muzzleflash);

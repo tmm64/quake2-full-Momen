@@ -947,6 +947,7 @@ struct gclient_s
 	qboolean	grenade_blew_up;
 	float		grenade_time;
 	float 		machinegun_time; //made by tanib
+	int			machinegun_count;//made by tanib
 	int			silencer_shots;
 	int			weapon_sound;
 
