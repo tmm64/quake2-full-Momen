@@ -344,6 +344,9 @@ Display Titan UI
 */
 void Cmd_TitanfallUI_f(edict_t* ent) {
 	//Here I need to figure out how to display the Titan health.
+	//nvm there isnt enough time for this. maybe next time o7
+	if (!ent)return;
+	if (!ent->client->isTitan) return;
 }
 
 /*
