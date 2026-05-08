@@ -948,6 +948,7 @@ struct gclient_s
 	float		grenade_time;
 	float 		machinegun_time; //made by tanib
 	int			machinegun_count;//made by tanib
+	float 		chaingun_time; //made by tanib
 	int			silencer_shots;
 	int			weapon_sound;
 

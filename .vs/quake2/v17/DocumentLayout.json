@@ -3,32 +3,32 @@
   "WorkspaceRootPath": "C:\\Users\\tanib\\GitProjects\\quake2-full-Momen\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{99BC3F01-A7EE-4881-939F-8A5EB75E1973}|game\\game.vcxproj|C:\\Users\\tanib\\GitProjects\\quake2-full-Momen\\game\\g_weapon.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{99BC3F01-A7EE-4881-939F-8A5EB75E1973}|game\\game.vcxproj|solutionrelative:game\\g_weapon.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{99BC3F01-A7EE-4881-939F-8A5EB75E1973}|game\\game.vcxproj|C:\\Users\\tanib\\GitProjects\\quake2-full-Momen\\game\\g_local.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{99BC3F01-A7EE-4881-939F-8A5EB75E1973}|game\\game.vcxproj|solutionrelative:game\\g_local.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{99BC3F01-A7EE-4881-939F-8A5EB75E1973}|game\\game.vcxproj|C:\\Users\\tanib\\GitProjects\\quake2-full-Momen\\game\\p_weapon.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{99BC3F01-A7EE-4881-939F-8A5EB75E1973}|game\\game.vcxproj|solutionrelative:game\\p_weapon.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{99BC3F01-A7EE-4881-939F-8A5EB75E1973}|game\\game.vcxproj|C:\\Users\\tanib\\GitProjects\\quake2-full-Momen\\game\\g_weapon.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{99BC3F01-A7EE-4881-939F-8A5EB75E1973}|game\\game.vcxproj|solutionrelative:game\\g_weapon.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{99BC3F01-A7EE-4881-939F-8A5EB75E1973}|game\\game.vcxproj|C:\\Users\\tanib\\GitProjects\\quake2-full-Momen\\game\\g_items.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{99BC3F01-A7EE-4881-939F-8A5EB75E1973}|game\\game.vcxproj|solutionrelative:game\\g_items.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{99BC3F01-A7EE-4881-939F-8A5EB75E1973}|game\\game.vcxproj|C:\\Users\\tanib\\GitProjects\\quake2-full-Momen\\game\\q_shared.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{99BC3F01-A7EE-4881-939F-8A5EB75E1973}|game\\game.vcxproj|solutionrelative:game\\q_shared.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{99BC3F01-A7EE-4881-939F-8A5EB75E1973}|game\\game.vcxproj|C:\\Users\\tanib\\GitProjects\\quake2-full-Momen\\game\\g_local.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{99BC3F01-A7EE-4881-939F-8A5EB75E1973}|game\\game.vcxproj|solutionrelative:game\\g_local.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{99BC3F01-A7EE-4881-939F-8A5EB75E1973}|game\\game.vcxproj|C:\\Users\\tanib\\GitProjects\\quake2-full-Momen\\game\\p_client.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{99BC3F01-A7EE-4881-939F-8A5EB75E1973}|game\\game.vcxproj|solutionrelative:game\\p_client.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{99BC3F01-A7EE-4881-939F-8A5EB75E1973}|game\\game.vcxproj|C:\\Users\\tanib\\GitProjects\\quake2-full-Momen\\game\\p_hud.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{99BC3F01-A7EE-4881-939F-8A5EB75E1973}|game\\game.vcxproj|solutionrelative:game\\p_hud.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{99BC3F01-A7EE-4881-939F-8A5EB75E1973}|game\\game.vcxproj|C:\\Users\\tanib\\GitProjects\\quake2-full-Momen\\game\\p_view.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{99BC3F01-A7EE-4881-939F-8A5EB75E1973}|game\\game.vcxproj|solutionrelative:game\\p_view.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{99BC3F01-A7EE-4881-939F-8A5EB75E1973}|game\\game.vcxproj|C:\\Users\\tanib\\GitProjects\\quake2-full-Momen\\game\\m_infantry.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{99BC3F01-A7EE-4881-939F-8A5EB75E1973}|game\\game.vcxproj|solutionrelative:game\\m_infantry.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{99BC3F01-A7EE-4881-939F-8A5EB75E1973}|game\\game.vcxproj|C:\\Users\\tanib\\GitProjects\\quake2-full-Momen\\game\\g_cmds.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
@@ -45,69 +45,98 @@
           "SelectedChildIndex": 5,
           "Children": [
             {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "q_shared.h",
+              "DocumentMoniker": "C:\\Users\\tanib\\GitProjects\\quake2-full-Momen\\game\\q_shared.h",
+              "RelativeDocumentMoniker": "game\\q_shared.h",
+              "ToolTip": "C:\\Users\\tanib\\GitProjects\\quake2-full-Momen\\game\\q_shared.h",
+              "RelativeToolTip": "game\\q_shared.h",
+              "ViewState": "AgIAAJEAAAAAAAAAAAAmwKEAAAAKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2026-05-07T00:33:11.675Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "p_client.c",
+              "DocumentMoniker": "C:\\Users\\tanib\\GitProjects\\quake2-full-Momen\\game\\p_client.c",
+              "RelativeDocumentMoniker": "game\\p_client.c",
+              "ToolTip": "C:\\Users\\tanib\\GitProjects\\quake2-full-Momen\\game\\p_client.c",
+              "RelativeToolTip": "game\\p_client.c",
+              "ViewState": "AgIAALEAAAAAAAAAAAAAAMIAAAAKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000423|",
+              "WhenOpened": "2026-05-01T20:19:55.8Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "g_local.h",
+              "DocumentMoniker": "C:\\Users\\tanib\\GitProjects\\quake2-full-Momen\\game\\g_local.h",
+              "RelativeDocumentMoniker": "game\\g_local.h",
+              "ToolTip": "C:\\Users\\tanib\\GitProjects\\quake2-full-Momen\\game\\g_local.h",
+              "RelativeToolTip": "game\\g_local.h",
+              "ViewState": "AgIAACgCAAAAAAAAAAAuwD8CAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2026-04-16T13:46:04.071Z",
+              "EditorCaption": ""
+            },
+            {
               "$type": "Document",
               "DocumentIndex": 2,
+              "Title": "g_items.c",
+              "DocumentMoniker": "C:\\Users\\tanib\\GitProjects\\quake2-full-Momen\\game\\g_items.c",
+              "RelativeDocumentMoniker": "game\\g_items.c",
+              "ToolTip": "C:\\Users\\tanib\\GitProjects\\quake2-full-Momen\\game\\g_items.c",
+              "RelativeToolTip": "game\\g_items.c",
+              "ViewState": "AgIAAOEFAAAAAAAAAAAuwPIFAAATAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000423|",
+              "WhenOpened": "2026-04-09T18:09:49.897Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
               "Title": "p_weapon.c",
               "DocumentMoniker": "C:\\Users\\tanib\\GitProjects\\quake2-full-Momen\\game\\p_weapon.c",
               "RelativeDocumentMoniker": "game\\p_weapon.c",
               "ToolTip": "C:\\Users\\tanib\\GitProjects\\quake2-full-Momen\\game\\p_weapon.c",
               "RelativeToolTip": "game\\p_weapon.c",
-              "ViewState": "AgIAACABAAAAAAAAAAAAANADAAADAAAAAAAAAA==",
+              "ViewState": "AgIAAPYCAAAAAAAAAAAAAP8CAAAVAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000423|",
               "WhenOpened": "2026-03-31T16:49:49.39Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "p_view.c",
-              "DocumentMoniker": "C:\\Users\\tanib\\GitProjects\\quake2-full-Momen\\game\\p_view.c",
-              "RelativeDocumentMoniker": "game\\p_view.c",
-              "ToolTip": "C:\\Users\\tanib\\GitProjects\\quake2-full-Momen\\game\\p_view.c",
-              "RelativeToolTip": "game\\p_view.c",
-              "ViewState": "AgIAABoBAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000423|",
-              "WhenOpened": "2026-04-30T14:41:32.176Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "m_infantry.c",
-              "DocumentMoniker": "C:\\Users\\tanib\\GitProjects\\quake2-full-Momen\\game\\m_infantry.c",
-              "RelativeDocumentMoniker": "game\\m_infantry.c",
-              "ToolTip": "C:\\Users\\tanib\\GitProjects\\quake2-full-Momen\\game\\m_infantry.c",
-              "RelativeToolTip": "game\\m_infantry.c",
-              "ViewState": "AgIAANIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000423|",
-              "WhenOpened": "2026-04-30T14:39:19.895Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "p_hud.c",
-              "DocumentMoniker": "C:\\Users\\tanib\\GitProjects\\quake2-full-Momen\\game\\p_hud.c",
-              "RelativeDocumentMoniker": "game\\p_hud.c",
-              "ToolTip": "C:\\Users\\tanib\\GitProjects\\quake2-full-Momen\\game\\p_hud.c",
-              "RelativeToolTip": "game\\p_hud.c",
-              "ViewState": "AgIAADABAAAAAAAAAAAMwFoBAAA6AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000423|",
-              "WhenOpened": "2026-04-29T20:16:05.814Z"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "g_weapon.c",
               "DocumentMoniker": "C:\\Users\\tanib\\GitProjects\\quake2-full-Momen\\game\\g_weapon.c",
               "RelativeDocumentMoniker": "game\\g_weapon.c",
               "ToolTip": "C:\\Users\\tanib\\GitProjects\\quake2-full-Momen\\game\\g_weapon.c",
               "RelativeToolTip": "game\\g_weapon.c",
-              "ViewState": "AgIAALQBAAAAAAAAAAAMwJEBAAAYAAAAAAAAAA==",
+              "ViewState": "AgIAAGACAAAAAAAAAAAAAIMCAAAeAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000423|",
               "WhenOpened": "2026-03-31T16:56:42.197Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "p_hud.c",
+              "DocumentMoniker": "C:\\Users\\tanib\\GitProjects\\quake2-full-Momen\\game\\p_hud.c",
+              "RelativeDocumentMoniker": "game\\p_hud.c",
+              "ToolTip": "C:\\Users\\tanib\\GitProjects\\quake2-full-Momen\\game\\p_hud.c",
+              "RelativeToolTip": "game\\p_hud.c",
+              "ViewState": "AgIAAJsBAAAAAAAAAAAwwJABAAAyAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000423|",
+              "WhenOpened": "2026-04-29T20:16:05.814Z",
               "EditorCaption": ""
             },
             {
@@ -118,35 +147,9 @@
               "RelativeDocumentMoniker": "game\\g_cmds.c",
               "ToolTip": "C:\\Users\\tanib\\GitProjects\\quake2-full-Momen\\game\\g_cmds.c",
               "RelativeToolTip": "game\\g_cmds.c",
-              "ViewState": "AgIAAHwAAAAAAAAAAAAMwJIAAAAEAAAAAAAAAA==",
+              "ViewState": "AgIAAJEAAAAAAAAAAAAMwJIAAAAEAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000423|",
               "WhenOpened": "2026-04-16T14:28:56.44Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "g_local.h",
-              "DocumentMoniker": "C:\\Users\\tanib\\GitProjects\\quake2-full-Momen\\game\\g_local.h",
-              "RelativeDocumentMoniker": "game\\g_local.h",
-              "ToolTip": "C:\\Users\\tanib\\GitProjects\\quake2-full-Momen\\game\\g_local.h",
-              "RelativeToolTip": "game\\g_local.h",
-              "ViewState": "AgIAAJwDAAAAAAAAAAAMwOIDAAAQAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2026-04-16T13:46:04.071Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "g_items.c",
-              "DocumentMoniker": "C:\\Users\\tanib\\GitProjects\\quake2-full-Momen\\game\\g_items.c",
-              "RelativeDocumentMoniker": "game\\g_items.c",
-              "ToolTip": "C:\\Users\\tanib\\GitProjects\\quake2-full-Momen\\game\\g_items.c",
-              "RelativeToolTip": "game\\g_items.c",
-              "ViewState": "AgIAAIAFAAAAAAAAAAAMwJYFAAAfAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000423|",
-              "WhenOpened": "2026-04-09T18:09:49.897Z",
-              "EditorCaption": ""
             }
           ]
         }

@@ -725,7 +725,7 @@ void weapon_grenadelauncher_fire (edict_t *ent)
 	VectorScale (forward, -2, ent->client->kick_origin);
 	ent->client->kick_angles[0] = -1;
 
-	fire_grenade (ent, start, forward, damage, 600, 2.5, radius);
+	fire_grenade (ent, start, forward, damage, 600, 1.0, radius);
 
 	gi.WriteByte (svc_muzzleflash);
 	gi.WriteShort (ent-g_edicts);
@@ -743,7 +743,7 @@ void weapon_grenadelauncher_fire (edict_t *ent)
 void Weapon_GrenadeLauncher (edict_t *ent)
 {
 	static int	pause_frames[]	= {34, 51, 59, 0};
-	static int	fire_frames[]	= {6, 0};
+	static int	fire_frames[]	= {6,8, 0};
 
 	Weapon_Generic (ent, 5, 16, 59, 64, pause_frames, fire_frames, weapon_grenadelauncher_fire);
 }
@@ -824,6 +824,11 @@ void Blaster_Fire (edict_t *ent, vec3_t g_offset, int damage, qboolean hyper, in
 		return;
 	}
 
+	if (!(ent->client->buttons & BUTTON_ATTACK)) {
+		return;
+	}
+
+
 	if (is_quad)
 		damage *= 4;
 	AngleVectors (ent->client->v_angle, forward, right, NULL);
@@ -834,8 +839,9 @@ void Blaster_Fire (edict_t *ent, vec3_t g_offset, int damage, qboolean hyper, in
 	VectorScale (forward, -2, ent->client->kick_origin);
 	ent->client->kick_angles[0] = -1;
 
-	fire_blaster (ent, start, forward, damage, 1000, effect, hyper);
-
+	//fire_blaster (ent, start, forward, damage, 1000, effect, hyper);
+	fire_bullet(ent, start, forward, 30, 0, 100, 200, MOD_MACHINEGUN);
+	ent->client->ps.gunframe = 5;
 
 	// send muzzle flash
 	gi.WriteByte (svc_muzzleflash);
@@ -864,10 +870,10 @@ void Weapon_Blaster_Fire (edict_t *ent)
 
 void Weapon_Blaster (edict_t *ent)
 {
-	static int	pause_frames[]	= {19, 32, 0};
+	static int	pause_frames[]	= {0};
 	static int	fire_frames[]	= {5, 0};
 
-	Weapon_Generic (ent, 4, 8, 52, 55, pause_frames, fire_frames, Weapon_Blaster_Fire);
+	Weapon_Generic (ent, 4, 6, 7, 10, pause_frames, fire_frames, Weapon_Blaster_Fire);
 }
 
 
@@ -943,9 +949,9 @@ void Weapon_HyperBlaster_Fire (edict_t *ent)
 void Weapon_HyperBlaster (edict_t *ent)
 {
 	static int	pause_frames[]	= {0};
-	static int	fire_frames[]	= {6, 7, 8, 9, 10, 11, 0};
+	static int	fire_frames[]	= {6,0};
 
-	Weapon_Generic (ent, 5, 20, 49, 53, pause_frames, fire_frames, Weapon_HyperBlaster_Fire);
+	Weapon_Generic (ent, 5, 7, 8, 53, pause_frames, fire_frames, Weapon_HyperBlaster_Fire);
 }
 
 /*
@@ -1083,7 +1089,19 @@ void Chaingun_Fire (edict_t *ent)
 	vec3_t		offset;
 	int			damage;
 	int			kick = 2;
+	int			spread;
 
+	if (!ent)return;
+
+	ent->client->chaingun_time += FRAMETIME;
+
+	if (ent->client->chaingun_time > 2.0f)
+	{
+		ent->client->chaingun_time = 2.0f;
+	}
+
+	spread = 600 - (int)((ent->client->chaingun_time / 2.0f) * 500);
+	gi.dprintf("spread: %d\n", spread);
 	if (deathmatch->value)
 		damage = 6;
 	else
@@ -1096,6 +1114,11 @@ void Chaingun_Fire (edict_t *ent)
 	{
 		ent->client->ps.gunframe = 32;
 		ent->client->weapon_sound = 0;
+		return;
+	}
+	if (!(ent->client->buttons & BUTTON_ATTACK))
+	{
+		ent->client->chaingun_time = 0.0f;
 		return;
 	}
 	else if ((ent->client->ps.gunframe == 21) && (ent->client->buttons & BUTTON_ATTACK)
@@ -1177,7 +1200,7 @@ void Chaingun_Fire (edict_t *ent)
 		VectorSet(offset, 0, r, u + ent->viewheight-8);
 		P_ProjectSource (ent->client, ent->s.origin, offset, forward, right, start);
 
-		fire_bullet (ent, start, forward, damage, kick, DEFAULT_BULLET_HSPREAD, DEFAULT_BULLET_VSPREAD, MOD_CHAINGUN);
+		fire_bullet (ent, start, forward, damage, kick, spread, spread, MOD_CHAINGUN);
 	}
 
 	// send muzzle flash
@@ -1272,9 +1295,10 @@ void weapon_supershotgun_fire (edict_t *ent)
 	vec3_t		forward, right;
 	vec3_t		offset;
 	vec3_t		v;
+	vec3_t		boltDir;
 	int			damage = 6;
 	int			kick = 12;
-
+	
 	AngleVectors (ent->client->v_angle, forward, right, NULL);
 
 	VectorScale (forward, -2, ent->client->kick_origin);
@@ -1288,16 +1312,28 @@ void weapon_supershotgun_fire (edict_t *ent)
 		damage *= 4;
 		kick *= 4;
 	}
+	fire_blaster(ent, start, forward, damage, 1000, EF_BLASTER, false);
 
+	VectorMA(forward, 0.04f, right, boltDir); VectorNormalize(boltDir);
+	fire_blaster(ent, start, boltDir, damage, 1000, EF_BLASTER, false);
+
+	VectorMA(forward, -0.04f, right, boltDir); VectorNormalize(boltDir);
+	fire_blaster(ent, start, boltDir, damage, 1000, EF_BLASTER, false);
+	VectorMA(forward, 0.08f, right, boltDir); VectorNormalize(boltDir);
+	fire_blaster(ent, start, boltDir, damage, 1000, EF_BLASTER, false);
+
+	VectorMA(forward, -0.08f, right, boltDir); VectorNormalize(boltDir);
+	fire_blaster(ent, start, boltDir, damage, 1000, EF_BLASTER, false);
+	/*
 	v[PITCH] = ent->client->v_angle[PITCH];
 	v[YAW]   = ent->client->v_angle[YAW] - 5;
 	v[ROLL]  = ent->client->v_angle[ROLL];
 	AngleVectors (v, forward, NULL, NULL);
-	fire_shotgun (ent, start, forward, damage, kick, DEFAULT_SHOTGUN_HSPREAD, DEFAULT_SHOTGUN_VSPREAD, DEFAULT_SSHOTGUN_COUNT/2, MOD_SSHOTGUN);
+	fire_shotgun (ent, start, forward, damage, kick, DEFAULT_SHOTGUN_HSPREAD, 200, DEFAULT_SSHOTGUN_COUNT/2, MOD_SSHOTGUN);
 	v[YAW]   = ent->client->v_angle[YAW] + 5;
 	AngleVectors (v, forward, NULL, NULL);
-	fire_shotgun (ent, start, forward, damage, kick, DEFAULT_SHOTGUN_HSPREAD, DEFAULT_SHOTGUN_VSPREAD, DEFAULT_SSHOTGUN_COUNT/2, MOD_SSHOTGUN);
-
+	fire_shotgun (ent, start, forward, damage, kick, DEFAULT_SHOTGUN_HSPREAD, 200, DEFAULT_SSHOTGUN_COUNT/2, MOD_SSHOTGUN);
+	*/
 	// send muzzle flash
 	gi.WriteByte (svc_muzzleflash);
 	gi.WriteShort (ent-g_edicts);
