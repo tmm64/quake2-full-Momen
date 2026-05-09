@@ -758,8 +758,10 @@ ROCKET
 
 void Weapon_RocketLauncher_Fire (edict_t *ent)
 {
+	if (!ent)return;
 	vec3_t	offset, start;
-	vec3_t	forward, right;
+	vec3_t	forward, right, up;
+	vec3_t  rocketDir;
 	int		damage;
 	float	damage_radius;
 	int		radius_damage;
@@ -773,14 +775,30 @@ void Weapon_RocketLauncher_Fire (edict_t *ent)
 		radius_damage *= 4;
 	}
 
-	AngleVectors (ent->client->v_angle, forward, right, NULL);
-
+	AngleVectors(ent->client->v_angle, forward, right, up);
 	VectorScale (forward, -2, ent->client->kick_origin);
 	ent->client->kick_angles[0] = -1;
 
 	VectorSet(offset, 8, 8, ent->viewheight-8);
 	P_ProjectSource (ent->client, ent->s.origin, offset, forward, right, start);
-	fire_rocket (ent, start, forward, damage, 650, damage_radius, radius_damage);
+
+	fire_rocket (ent, start, forward, damage, 600, damage_radius, radius_damage);
+	
+	VectorMA(forward, 0.05f, right, rocketDir);
+	VectorMA(rocketDir, 0.05f, up, rocketDir);
+	VectorNormalize(rocketDir);
+	fire_rocket(ent, start, rocketDir, damage, 600, damage_radius, radius_damage);
+	
+	VectorMA(forward, -0.05f, right, rocketDir);
+	VectorMA(rocketDir, 0.05f, up, rocketDir);
+	VectorNormalize(rocketDir);
+	fire_rocket(ent, start, rocketDir, damage, 600, damage_radius, radius_damage);
+	
+	VectorMA(forward, 0.05f, right, rocketDir);
+	VectorMA(rocketDir, -0.05f, up, rocketDir);
+	VectorNormalize(rocketDir);
+	fire_rocket(ent, start, rocketDir, damage, 600, damage_radius, radius_damage);
+	
 
 	// send muzzle flash
 	gi.WriteByte (svc_muzzleflash);
@@ -879,6 +897,7 @@ void Weapon_Blaster (edict_t *ent)
 
 void Weapon_HyperBlaster_Fire (edict_t *ent)
 {
+	if (!ent)return;
 	float	rotation;
 	vec3_t	offset;
 	int		effect;
@@ -964,6 +983,7 @@ MACHINEGUN / CHAINGUN
 
 void Machinegun_Fire (edict_t *ent)
 {
+	if (!ent)return;
 	int	i;
 	vec3_t		start;
 	vec3_t		forward, right;
@@ -1081,6 +1101,7 @@ void Weapon_Machinegun (edict_t *ent)
 
 void Chaingun_Fire (edict_t *ent)
 {
+	if (!ent)return;
 	int			i;
 	int			shots;
 	vec3_t		start;
@@ -1235,6 +1256,7 @@ SHOTGUN / SUPERSHOTGUN
 
 void weapon_shotgun_fire (edict_t *ent)
 {
+	if (!ent)return;
 	vec3_t		start;
 	vec3_t		forward, right;
 	vec3_t		offset;
@@ -1291,6 +1313,7 @@ void Weapon_Shotgun (edict_t *ent)
 
 void weapon_supershotgun_fire (edict_t *ent)
 {
+	if (!ent)return;
 	vec3_t		start;
 	vec3_t		forward, right;
 	vec3_t		offset;
@@ -1319,6 +1342,7 @@ void weapon_supershotgun_fire (edict_t *ent)
 
 	VectorMA(forward, -0.04f, right, boltDir); VectorNormalize(boltDir);
 	fire_blaster(ent, start, boltDir, damage, 1000, EF_BLASTER, false);
+
 	VectorMA(forward, 0.08f, right, boltDir); VectorNormalize(boltDir);
 	fire_blaster(ent, start, boltDir, damage, 1000, EF_BLASTER, false);
 
@@ -1367,6 +1391,7 @@ RAILGUN
 
 void weapon_railgun_fire (edict_t *ent)
 {
+	if (!ent)return;
 	vec3_t		start;
 	vec3_t		forward, right;
 	vec3_t		offset;
@@ -1380,8 +1405,36 @@ void weapon_railgun_fire (edict_t *ent)
 	}
 	else
 	{
-		damage = 150;
-		kick = 250;
+		damage = 300;
+		kick = 800;
+	}
+
+	if (ent->client->buttons & BUTTON_ATTACK)
+	{
+		ent->client->railgun_charge += FRAMETIME;
+		gi.dprintf("Charge: %f\n", ent->client->railgun_charge);
+		
+		if (ent->client->railgun_charge > 2.0f) {
+			ent->client->railgun_charged = true;
+		}
+
+
+		if(ent->client->railgun_charge < 2.0f) {
+			return;
+		}
+
+		if (ent->client->railgun_charged) {
+			gi.dprintf("RAILGUN CHARGED!\n");
+			damage = 900;
+			kick = 2400;
+			gi.dprintf("Damage: %d\n", damage);
+		}
+
+		
+		if (ent->client->oldbuttons & BUTTON_ATTACK) {
+			return;
+		}
+			
 	}
 
 	if (is_quad)
@@ -1398,7 +1451,8 @@ void weapon_railgun_fire (edict_t *ent)
 	VectorSet(offset, 0, 7,  ent->viewheight-8);
 	P_ProjectSource (ent->client, ent->s.origin, offset, forward, right, start);
 	fire_rail (ent, start, forward, damage, kick);
-
+	ent->client->railgun_charge = 0.0f;
+	ent->client->railgun_charged = false;
 	// send muzzle flash
 	gi.WriteByte (svc_muzzleflash);
 	gi.WriteShort (ent-g_edicts);
@@ -1432,6 +1486,7 @@ BFG10K
 
 void weapon_bfg_fire (edict_t *ent)
 {
+	if (!ent)return;
 	vec3_t	offset, start;
 	vec3_t	forward, right;
 	int		damage;
