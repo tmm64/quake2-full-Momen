@@ -1490,12 +1490,36 @@ void weapon_bfg_fire (edict_t *ent)
 	vec3_t	offset, start;
 	vec3_t	forward, right;
 	int		damage;
-	float	damage_radius = 1000;
+	float	damage_radius = 100;
 
 	if (deathmatch->value)
 		damage = 200;
 	else
 		damage = 500;
+
+	if (ent->client->buttons & BUTTON_ATTACK)
+	{
+		ent->client->bfg_charge += FRAMETIME;
+		gi.dprintf("Charge: %f\n", ent->client->bfg_charge);
+
+		if (ent->client->bfg_charge >= 2.0f) {
+			ent->client->bfg_charge = 2.0f;
+			ent->client->bfg_charged = true;
+			gi.dprintf("BFG CHARGED!\n");
+		}
+
+		return;
+
+	}
+
+	if(!ent->client->bfg_charged) {
+		ent->client->bfg_charge = 0.0f;
+		ent->client->bfg_charged = false;
+		return;
+	}
+
+	damage = 800;
+	damage_radius = 900;
 
 	if (ent->client->ps.gunframe == 9)
 	{
@@ -1533,8 +1557,10 @@ void weapon_bfg_fire (edict_t *ent)
 
 	VectorSet(offset, 8, 8, ent->viewheight-8);
 	P_ProjectSource (ent->client, ent->s.origin, offset, forward, right, start);
-	fire_bfg (ent, start, forward, damage, 400, damage_radius);
-
+	gi.dprintf("Radius: %d\n", damage_radius);
+	fire_bfg (ent, start, forward, damage, 200, damage_radius);
+	ent->client->bfg_charge = 0.0f;
+	ent->client->bfg_charged = false;
 	ent->client->ps.gunframe++;
 
 	PlayerNoise(ent, start, PNOISE_WEAPON);

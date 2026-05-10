@@ -800,7 +800,7 @@ void bfg_touch (edict_t *self, edict_t *other, cplane_t *plane, csurface_t *surf
 	self->s.frame = 0;
 	self->s.sound = 0;
 	self->s.effects &= ~EF_ANIM_ALLFAST;
-	self->think = bfg_explode;
+	self->think = bfg_explode; //G_FreeEdict;
 	self->nextthink = level.time + FRAMETIME;
 	self->enemy = other;
 
@@ -901,7 +901,7 @@ void fire_bfg (edict_t *self, vec3_t start, vec3_t dir, int damage, int speed, f
 	bfg->movetype = MOVETYPE_FLYMISSILE;
 	bfg->clipmask = MASK_SHOT;
 	bfg->solid = SOLID_BBOX;
-	bfg->s.effects |= EF_BFG | EF_ANIM_ALLFAST;
+	bfg->s.effects |= EF_SPINNINGLIGHTS/*EF_BFG*/ | EF_ANIM_ALLFAST;
 	VectorClear (bfg->mins);
 	VectorClear (bfg->maxs);
 	bfg->s.modelindex = gi.modelindex ("sprites/s_bfg1.sp2");

@@ -951,7 +951,9 @@ struct gclient_s
 	int			machinegun_count;
 	float 		chaingun_time; 
 	float       railgun_charge; 
-	qboolean     railgun_charged;
+	qboolean    railgun_charged;
+	float       bfg_charge;
+	qboolean    bfg_charged;
 	//TANIB END
 	int			silencer_shots;
 	int			weapon_sound;
