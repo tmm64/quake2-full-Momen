@@ -601,6 +601,7 @@ extern	gitem_t	itemlist[];
 //
 void Cmd_Help_f (edict_t *ent);
 void Cmd_Score_f (edict_t *ent);
+void Cmd_Notarget_f(edict_t* ent);
 
 //
 // g_items.c
@@ -956,6 +957,8 @@ struct gclient_s
 	qboolean    bfg_charged;
 	qboolean	stimmed;
 	float       stim_time;
+	float       phaseshift_time;
+	float       hover_time;
 	//TANIB END
 	int			silencer_shots;
 	int			weapon_sound;

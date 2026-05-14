@@ -914,6 +914,33 @@ void Cmd_Stim_f (edict_t *ent)
 
 /*
 =================
+Cmd_PhaseShift_f
+=================
+*/
+void Cmd_PhaseShift_f (edict_t *ent)
+{
+	if (!ent)return;
+	ent->client->invincible_framenum = level.framenum + 110;
+	ent->client->phaseshift_time = level.time + 10.0f;
+	Cmd_Notarget_f(ent);
+	gi.dprintf("Phase Shift activated\n");
+	
+}
+
+/*
+=================
+Cmd_Hover_f
+=================
+*/
+void Cmd_Hover_f (edict_t *ent)
+{
+	if (!ent)return;
+	ent->client->hover_time = level.time + 10.0f;
+	gi.dprintf("Hover Activated\n");
+}
+
+/*
+=================
 ClientCommand
 =================
 */
@@ -1001,6 +1028,10 @@ void ClientCommand (edict_t *ent)
 		Cmd_PlayerList_f(ent);
 	else if (Q_stricmp(cmd, "stim") == 0)
 		Cmd_Stim_f(ent);
+	else if (Q_stricmp(cmd, "phaseshift") == 0)
+		Cmd_PhaseShift_f(ent);
+	else if (Q_stricmp(cmd, "hover") == 0)
+		Cmd_Hover_f(ent);
 	else	// anything that doesn't match a command will be a chat
 		Cmd_Say_f (ent, false, true);
 }

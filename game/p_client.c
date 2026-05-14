@@ -1618,14 +1618,23 @@ void ClientThink (edict_t *ent, usercmd_t *ucmd)
 			pm.s.velocity[i] = ent->velocity[i]*8;
 		}
 		if (ent->client->stimmed) {
-			pm.s.velocity[0] *= 2.5;
-			pm.s.velocity[1] *= 2.5;
+			pm.s.velocity[0] *= 1.1;
+			pm.s.velocity[1] *= 1.1;
+		}
+		if(ent->client->stimmed && ent->client->stim_time < level.time) {
+			ent->client->stimmed = false;
+			gi.dprintf("stimmed off\n");
+		}
+
+		if (ent->client->phaseshift_time > 0 && ent->client->phaseshift_time < level.time) {
+			Cmd_Notarget_f(ent);
+			ent->client->phaseshift_time = 0.0f;
 		}
 
 		if (memcmp(&client->old_pmove, &pm.s, sizeof(pm.s)))
 		{
 			pm.snapinitial = true;
-			gi.dprintf ("pmove changed!\n");
+//			gi.dprintf ("pmove changed!\n");
 		}
 
 		pm.cmd = *ucmd;
@@ -1737,6 +1746,14 @@ void ClientThink (edict_t *ent, usercmd_t *ucmd)
 			}
 		} else
 			client->ps.pmove.pm_flags &= ~PMF_JUMP_HELD;
+	}
+	if (ent->client->hover_time > level.time) {
+		if ((ent->client->ps.pmove.pm_flags & PMF_JUMP_HELD) && !ent->groundentity) {
+			if (ent->velocity[2] < 0) {
+				ent->velocity[2] = 0;
+				ent->client->ps.pmove.velocity[2] = 0;
+			}
+		}
 	}
 
 	// update chase cam if being followed
