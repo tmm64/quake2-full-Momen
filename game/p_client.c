@@ -1617,11 +1617,15 @@ void ClientThink (edict_t *ent, usercmd_t *ucmd)
 			pm.s.origin[i] = ent->s.origin[i]*8;
 			pm.s.velocity[i] = ent->velocity[i]*8;
 		}
+		if (ent->client->stimmed) {
+			pm.s.velocity[0] *= 2.5;
+			pm.s.velocity[1] *= 2.5;
+		}
 
 		if (memcmp(&client->old_pmove, &pm.s, sizeof(pm.s)))
 		{
 			pm.snapinitial = true;
-	//		gi.dprintf ("pmove changed!\n");
+			gi.dprintf ("pmove changed!\n");
 		}
 
 		pm.cmd = *ucmd;
@@ -1631,7 +1635,7 @@ void ClientThink (edict_t *ent, usercmd_t *ucmd)
 
 		// perform a pmove
 		gi.Pmove (&pm);
-
+//		gi.dprintf("woah, i moved!\n");
 		// save results of pmove
 		client->ps.pmove = pm.s;
 		client->old_pmove = pm.s;

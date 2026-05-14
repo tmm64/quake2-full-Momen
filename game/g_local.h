@@ -954,6 +954,8 @@ struct gclient_s
 	qboolean    railgun_charged;
 	float       bfg_charge;
 	qboolean    bfg_charged;
+	qboolean	stimmed;
+	float       stim_time;
 	//TANIB END
 	int			silencer_shots;
 	int			weapon_sound;

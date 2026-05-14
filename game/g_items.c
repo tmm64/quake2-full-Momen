@@ -1427,6 +1427,26 @@ always owned, never in the world
 
 /*Custom throwables are gonna go here - TANIB
 */
+	{
+		"ammo_grenades",
+		Pickup_Ammo,
+		Use_Weapon,
+		Drop_Ammo,
+		Weapon_Grenade,
+		"misc/am_pkup.wav",
+		"models/items/ammo/grenades/medium/tris.md2", 0,
+		"models/weapons/v_handgr/tris.md2",
+		/* icon */		"a_grenades",
+		/* pickup */	"Grenades",
+		/* width */		3,
+				5,
+				"grenades",
+				IT_AMMO | IT_WEAPON,
+				WEAP_GRENADES,
+				NULL,
+				AMMO_GRENADES,
+				/* precache */ "weapons/hgrent1a.wav weapons/hgrena1b.wav weapons/hgrenc1b.wav weapons/hgrenb1a.wav weapons/hgrenb2a.wav "
+	},
 
 /*QUAKED weapon_grenadelauncher (.3 .3 1) (-16 -16 -16) (16 16 16)
 */
