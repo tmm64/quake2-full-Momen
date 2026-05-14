@@ -3,6 +3,10 @@
   "WorkspaceRootPath": "C:\\Users\\tanib\\GitProjects\\quake2-full-Momen\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{99BC3F01-A7EE-4881-939F-8A5EB75E1973}|game\\game.vcxproj|C:\\Users\\tanib\\GitProjects\\quake2-full-Momen\\game\\p_hud.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{99BC3F01-A7EE-4881-939F-8A5EB75E1973}|game\\game.vcxproj|solutionrelative:game\\p_hud.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{99BC3F01-A7EE-4881-939F-8A5EB75E1973}|game\\game.vcxproj|C:\\Users\\tanib\\GitProjects\\quake2-full-Momen\\game\\g_cmds.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{99BC3F01-A7EE-4881-939F-8A5EB75E1973}|game\\game.vcxproj|solutionrelative:game\\g_cmds.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
@@ -17,10 +21,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{99BC3F01-A7EE-4881-939F-8A5EB75E1973}|game\\game.vcxproj|C:\\Users\\tanib\\GitProjects\\quake2-full-Momen\\game\\g_items.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{99BC3F01-A7EE-4881-939F-8A5EB75E1973}|game\\game.vcxproj|solutionrelative:game\\g_items.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{99BC3F01-A7EE-4881-939F-8A5EB75E1973}|game\\game.vcxproj|C:\\Users\\tanib\\GitProjects\\quake2-full-Momen\\game\\p_hud.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{99BC3F01-A7EE-4881-939F-8A5EB75E1973}|game\\game.vcxproj|solutionrelative:game\\p_hud.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{99BC3F01-A7EE-4881-939F-8A5EB75E1973}|game\\game.vcxproj|C:\\Users\\tanib\\GitProjects\\quake2-full-Momen\\game\\p_weapon.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
@@ -46,8 +46,21 @@
       "DocumentGroups": [
         {
           "DockedHeight": 340,
-          "SelectedChildIndex": 6,
+          "SelectedChildIndex": 9,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "g_cmds.c",
+              "DocumentMoniker": "C:\\Users\\tanib\\GitProjects\\quake2-full-Momen\\game\\g_cmds.c",
+              "RelativeDocumentMoniker": "game\\g_cmds.c",
+              "ToolTip": "C:\\Users\\tanib\\GitProjects\\quake2-full-Momen\\game\\g_cmds.c",
+              "RelativeToolTip": "game\\g_cmds.c",
+              "ViewState": "AgIAAIwDAAAAAAAAAAAiwJ0DAAAnAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000423|",
+              "WhenOpened": "2026-04-16T14:28:56.44Z",
+              "EditorCaption": ""
+            },
             {
               "$type": "Document",
               "DocumentIndex": 6,
@@ -62,7 +75,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "g_items.c",
               "DocumentMoniker": "C:\\Users\\tanib\\GitProjects\\quake2-full-Momen\\game\\g_items.c",
               "RelativeDocumentMoniker": "game\\g_items.c",
@@ -70,8 +83,7 @@
               "RelativeToolTip": "game\\g_items.c",
               "ViewState": "AgIAAHUBAAAAAAAAAAAAwJEBAAAPAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000423|",
-              "WhenOpened": "2026-04-09T18:09:49.897Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-04-09T18:09:49.897Z"
             },
             {
               "$type": "Document",
@@ -111,7 +123,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "g_local.h",
               "DocumentMoniker": "C:\\Users\\tanib\\GitProjects\\quake2-full-Momen\\game\\g_local.h",
               "RelativeDocumentMoniker": "game\\g_local.h",
@@ -119,21 +131,7 @@
               "RelativeToolTip": "game\\g_local.h",
               "ViewState": "AgIAAAAEAAAAAAAAAAAUwBIEAAARAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2026-04-16T13:46:04.071Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "g_cmds.c",
-              "DocumentMoniker": "C:\\Users\\tanib\\GitProjects\\quake2-full-Momen\\game\\g_cmds.c",
-              "RelativeDocumentMoniker": "game\\g_cmds.c",
-              "ToolTip": "C:\\Users\\tanib\\GitProjects\\quake2-full-Momen\\game\\g_cmds.c",
-              "RelativeToolTip": "game\\g_cmds.c",
-              "ViewState": "AgIAAIwDAAAAAAAAAAAiwJ0DAAAnAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000423|",
-              "WhenOpened": "2026-04-16T14:28:56.44Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-04-16T13:46:04.071Z"
             },
             {
               "$type": "Bookmark",
@@ -141,7 +139,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "p_client.c",
               "DocumentMoniker": "C:\\Users\\tanib\\GitProjects\\quake2-full-Momen\\game\\p_client.c",
               "RelativeDocumentMoniker": "game\\p_client.c",
@@ -149,20 +147,20 @@
               "RelativeToolTip": "game\\p_client.c",
               "ViewState": "AgIAAMIGAAAAAAAAAAAlwNsGAAADAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000423|",
-              "WhenOpened": "2026-05-01T20:19:55.8Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-01T20:19:55.8Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 0,
               "Title": "p_hud.c",
               "DocumentMoniker": "C:\\Users\\tanib\\GitProjects\\quake2-full-Momen\\game\\p_hud.c",
               "RelativeDocumentMoniker": "game\\p_hud.c",
               "ToolTip": "C:\\Users\\tanib\\GitProjects\\quake2-full-Momen\\game\\p_hud.c",
               "RelativeToolTip": "game\\p_hud.c",
-              "ViewState": "AgIAAIEBAAAAAAAAAAAnwIsBAAABAAAAAAAAAA==",
+              "ViewState": "AgIAAC0BAAAAAAAAAAAlwDkBAAAPAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000423|",
-              "WhenOpened": "2026-04-29T20:16:05.814Z"
+              "WhenOpened": "2026-04-29T20:16:05.814Z",
+              "EditorCaption": ""
             }
           ]
         }
